@@ -1,0 +1,76 @@
+/* 豆包视频下载器样式 */
+
+.doubao-video-download-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.doubao-video-download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46a1 100%);
+}
+
+.doubao-video-download-btn:active {
+  transform: translateY(0);
+}
+
+.doubao-video-download-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.doubao-video-download-btn.downloading {
+  background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+  cursor: wait;
+}
+
+.doubao-video-download-btn.success {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.doubao-video-download-btn.error {
+  background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
+}
+
+/* 确保按钮在各种背景下都可见 */
+.doubao-video-download-btn {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 适配深色模式 */
+@media (prefers-color-scheme: dark) {
+  .doubao-video-download-btn {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* 小屏幕适配 */
+@media (max-width: 480px) {
+  .doubao-video-download-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .doubao-video-download-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+}
